@@ -86,10 +86,11 @@ def compressor_ui():
     label_output.pack(padx=10, pady=5)
     
     scale_compression_level = tk.Scale(from_=1, to=22)
+    scale_compression_level.set(22)
     
     # Output Text widget
     text_output = tk.Text(dialog, height=10, width=70, bg="black", fg="magenta")
-    text_output.pack(padx=10, pady=10, fill=tk.X)
+    text_output.pack(padx=10, pady=10, fill=tk.BOTH, expand=True)
     text_output.configure(state=tk.DISABLED)
     
     # Clean up function for closing the dialog
