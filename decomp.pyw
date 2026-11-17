@@ -8,7 +8,7 @@ class ZstdDecompressor:
     def __init__(self):
         self.decompressor = zstd.ZstdDecompressor()
 
-    def decompress(self, data: bytes) -> bytes:
+    def decompress(self, data: bytes):
         return self.decompressor.decompress(data)
 
 
@@ -32,11 +32,10 @@ def decompress_file(input_file):
 
 def decompressor_ui():
     root = ctk.CTk()
-    root.withdraw()  # Hide the main window
+    root.withdraw() 
     ctk.set_default_color_theme("blue")
     ctk.set_appearance_mode("Dark")
     
-    # Create a top-level dialog window
     dialog = ctk.CTkToplevel(root)
     dialog.title("Lye's Python zStandard Decompressor")
     
