@@ -22,10 +22,13 @@ def compress_file(input_file, compression_level):
         return False, f"Compression failed: {e}"
 def compressor_ui():
     root = ctk.CTk()
-    root.withdraw()  # Hide the main window
+    root.withdraw() 
     ctk.set_default_color_theme("blue")
     ctk.set_appearance_mode("Dark")
-    # Create a top-level dialog window
+
+
+
+    
     dialog = ctk.CTkToplevel(root)
     dialog.title("Lye's Python zStandard Compressor")
     label_file = ctk.CTkLabel(dialog, text="Select file(s) to compress in zStandard")
